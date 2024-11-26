@@ -8,50 +8,54 @@
   <style>
     body {
       background-color: #f4f4f4;
+      font-family: 'Times New Roman', serif;
     }
 
     .certificate-container {
-      border: 10px solid #0033cc;
-      padding: 20px;
+      border: 15px solid #aa00ff;
+      padding: 30px;
       margin: 20px 0;
       text-align: center;
       width: 100%;
       height: 600px;
-      background-color: #fff;
+      background-color: #ffffff;
       position: relative;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      border-radius: 20px;
     }
 
     .certificate-header {
-      background-color: #0033cc;
-      color: #fff;
+      background-color: #aa00ff;
+      color: #ffffff;
       padding: 15px 0;
       border-radius: 10px 10px 0 0;
       margin-bottom: 30px;
     }
 
     .certificate-header h1 {
-      font-size: 36px;
+      font-size: 40px;
       margin: 0;
+      font-weight: bold;
+      letter-spacing: 2px;
     }
 
     .certificate-container h2 {
-      font-size: 28px;
+      font-size: 30px;
       margin: 20px 0;
-      color: #333;
+      color: #333333;
     }
 
     .certificate-container p {
-      font-size: 20px;
+      font-size: 18px;
       margin: 10px 0;
+      color: #666666;
     }
 
     .signature {
       position: absolute;
       bottom: 30px;
       right: 50px;
-      font-size: 18px;
+      font-size: 16px;
       text-align: right;
     }
 
@@ -70,11 +74,11 @@
 
     .footer-title {
       font-weight: bold;
+      color: #aa00ff;
     }
 
-    /* Tombol dengan efek timbul */
     .btn-timbul {
-      background-color: #007bff;
+      background-color: #1a1a2e;
       border: none;
       color: white;
       padding: 12px 24px;
@@ -84,30 +88,25 @@
       transition: all 0.3s ease-in-out;
     }
 
-    /* Efek saat hover */
     .btn-timbul:hover {
-      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 8px 20px #aa00ff;
       transform: translateY(-5px);
+      background-color: #aa00ff;
     }
 
-    /* Efek saat ditekan */
     .btn-timbul:active {
       transform: translateY(2px);
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     }
-
   </style>
 </head>
 <body>
-
-  <!-- Bagian Header -->
-  <header class="bg-primary text-white text-center py-4">
+  <header class="bg-dark text-white text-center py-4">
     <div class="container">
       <h1>Buat Sertifikat</h1>
     </div>
   </header>
 
-  <!-- Formulir untuk Input Sertifikat -->
   <section class="py-5">
     <div class="container">
       <h2 class="mb-4">Formulir Pembuatan Sertifikat</h2>
@@ -132,12 +131,11 @@
           <label for="issuer" class="form-label">Nama Pemberi Sertifikat</label>
           <input type="text" class="form-control" id="issuer" required>
         </div>
-        <button type="button" class="btn btn-primary btn-timbul" onclick="generateCertificate()">Buat Sertifikat</button>
+        <button type="button" class="btn btn-timbul" onclick="generateCertificate()">Buat Sertifikat</button>
       </form>
     </div>
   </section>
 
-  <!-- Sertifikat yang dihasilkan -->
   <section id="certificate" class="py-5">
     <div class="container">
       <div id="certificateContainer" class="certificate-container">
@@ -164,7 +162,6 @@
     </div>
   </section>
 
-  <!-- Tombol Kembali ke Halaman Utama -->
   <section class="text-center py-3">
     <div class="container">
       <a href="index.html" class="btn btn-secondary btn-timbul">Kembali ke Halaman Utama</a>
@@ -199,9 +196,7 @@
     }
   </script>
 
-  <!-- Tambahkan html2canvas dari CDN -->
   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+6Hf0+8bDtPx4CGY1z4f+GLTztv8I" crossorigin="anonymous"></script>
 </body>
 </html>
